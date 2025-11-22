@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "../utils/api.js";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -64,9 +65,9 @@ const Login = () => {
 
         <p className="text-center text-sm text-gray-600 dark:text-gray-400 mt-4">
           Don't have an account?{" "}
-          <a className="text-green-600 dark:text-green-400" href="/register">
+          <Link className="text-green-600 dark:text-green-400" to="/">
             Sign Up
-          </a>
+          </Link>
         </p>
       </div>
     </div>
