@@ -24,6 +24,7 @@ const Login = () => {
       console.log(res.data.message);
       navigate("/dashboard");
     } catch (error) {
+      toast.error("User Not Found!")
       console.log(error.response?.data || error.message);
     }
   };

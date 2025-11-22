@@ -51,11 +51,11 @@ const Dashboard = () => {
   return (
     <>
       <div
-        className={`min-h-screen pt-4  px-4 flex items-start justify-center 
+        className={`min-h-screen pt-2 px-4 flex items-start justify-center 
         ${result || loading ? "overflow-auto" : "overflow-hidden"} 
         bg-gray-50 dark:bg-gray-900`}
       >
-        <div className="w-full max-w-3xl p-10 bg-white dark:bg-gray-800 rounded-2xl shadow-xl">
+        <div className="w-full max-w-2xl p-10 bg-white dark:bg-gray-800 rounded-2xl shadow-xl">
           <Navvbar />
 
           <p className="text-gray-600 dark:text-gray-400 mb-8">
