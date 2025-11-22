@@ -35,7 +35,10 @@ const Dashboard = () => {
 
       // Smooth scroll to bottom when result appears
       setTimeout(() => {
-        window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth",
+        });
       }, 300);
     } catch (error) {
       console.log(error);
@@ -52,11 +55,9 @@ const Dashboard = () => {
         ${result || loading ? "overflow-auto" : "overflow-hidden"} 
         bg-gray-50 dark:bg-gray-900`}
       >
-
         <div className="w-full max-w-3xl p-10 bg-white dark:bg-gray-800 rounded-2xl shadow-xl">
-      <Navvbar />
+          <Navvbar />
 
-         
           <p className="text-gray-600 dark:text-gray-400 mb-8">
             Fill in your details to get an AI-powered personalized meal plan.
           </p>
