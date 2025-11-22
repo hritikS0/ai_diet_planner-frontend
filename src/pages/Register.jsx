@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "../utils/api.js";
 import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -76,9 +76,9 @@ const Register = () => {
 
         <p className="text-center text-sm text-gray-600 dark:text-gray-400 mt-4">
           Already have an account?{" "}
-          <a className="text-green-600 dark:text-green-400" href="/login">
+          <Link className="text-green-600 dark:text-green-400" to="/">
             Login
-          </a>
+          </Link>
         </p>
       </div>
     </div>
