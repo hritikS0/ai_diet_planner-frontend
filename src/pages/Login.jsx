@@ -3,31 +3,31 @@ import axios from "../utils/api.js";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       const res = await axios.post(
-        "api/auth/login",
+        "/auth/login", // 🔹Fixed endpoint
         { email, password },
         { headers: { "Content-Type": "application/json" } }
       );
-      localStorage.setItem("token", res.data.token);
-      setEmail("");
-      setPassword("");
-      toast.success("Logged in successfully");
 
-      console.log(res.data.message);
+      localStorage.setItem("token", res.data.token);
+      toast.success("Logged in successfully");
       navigate("/dashboard");
     } catch (error) {
-      toast.error("User Not Found!")
+      toast.error(error.response?.data?.message || "Invalid credentials");
       console.log(error.response?.data || error.message);
     }
   };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
       <div className="w-full max-w-md p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
@@ -43,6 +43,7 @@ const Login = () => {
               className="w-full p-3 border rounded-lg focus:outline-none focus:border-green-500 dark:bg-gray-700 dark:text-white"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
 
@@ -53,6 +54,7 @@ const Login = () => {
               className="w-full p-3 border rounded-lg focus:outline-none focus:border-green-500 dark:bg-gray-700 dark:text-white"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </div>
 

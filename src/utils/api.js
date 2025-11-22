@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://ai-diet-planner-backend.vercel.app/",
+  baseURL: "https://ai-diet-planner-backend.vercel.app/api",
 });
 
 instance.interceptors.request.use((config)=>{

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "../utils/api.js";
 import toast from "react-hot-toast";
-import { useNavigate,Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -12,7 +12,7 @@ const Register = () => {
     console.log;
     try {
       const res = await axios.post(
-        "/api/auth/register",
+        "/auth/register",
         { name, email, password },
         { headers: { "Content-Type": "application/json" } }
       );
