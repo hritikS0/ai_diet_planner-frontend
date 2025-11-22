@@ -24,7 +24,7 @@ const Dashboard = () => {
     setLoading(true);
     e.preventDefault();
     try {
-      const res = await axios.post("/api/diet/generate", formData);
+      const res = await axios.post("/diet/generate", formData);
       console.log("API Response:", res.data);
 
       const dietData = res.data?.diet?.raw
