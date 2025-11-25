@@ -11,7 +11,7 @@ const App = () => {
   return (
     <> 
       <Toaster position="top-right" reverseOrder={false} />
-      <Routes>
+      <Routes >
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Register />} />
         <Route
