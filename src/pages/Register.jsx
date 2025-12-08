@@ -24,11 +24,13 @@ const Register = () => {
       console.log(res.data.message);
       navigate("/login");
     } catch (error) {
+      toast.error(error.response?.data?.message || "Registration failed");
       console.log(error.response?.data || error.message);
     }
   };
 
   return (
+    
     <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
       <div className="w-full max-w-md p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
         <h2 className="text-2xl font-bold text-green-600 dark:text-green-400 text-center mb-6">
@@ -68,7 +70,7 @@ const Register = () => {
 
           <button
             type="submit"
-            className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-3 rounded-lg"
+            className="w-full cursor-pointer bg-green-600 hover:bg-green-700 text-white font-medium py-3 rounded-lg"
           >
             Sign Up
           </button>

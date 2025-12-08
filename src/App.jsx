@@ -6,14 +6,16 @@ import Login from "./pages/Login";
 import { Toaster } from "react-hot-toast";
 import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
+import LandingPage from "./pages/LandingPage";
 
 const App = () => {
   return (
     <> 
       <Toaster position="top-right" reverseOrder={false} />
       <Routes >
+        <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Register />} />
+        <Route path="/register" element={<Register />} />
         <Route
           path="/dashboard"
           element={

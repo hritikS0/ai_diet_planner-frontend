@@ -3,6 +3,7 @@ import axios from "../utils/api.js";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
+import Navbar from "../components/Landingpage/Navbar.jsx";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -29,7 +30,10 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
+    <> 
+    
+     <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
+
       <div className="w-full max-w-md p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
         <h2 className="text-2xl font-bold text-green-600 dark:text-green-400 text-center mb-6">
           Login to NutriAI
@@ -60,7 +64,7 @@ const Login = () => {
 
           <button
             type="submit"
-            className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-3 rounded-lg"
+            className="w-full cursor-pointer bg-green-600 hover:bg-green-700 text-white font-medium py-3 rounded-lg"
           >
             Login
           </button>
@@ -68,12 +72,14 @@ const Login = () => {
 
         <p className="text-center text-sm text-gray-600 dark:text-gray-400 mt-4">
           Don't have an account?{" "}
-          <Link className="text-green-600 dark:text-green-400" to="/">
+          <Link className="text-green-600 dark:text-green-400" to="/register">
             Sign Up
           </Link>
         </p>
       </div>
     </div>
+    </>
+ 
   );
 };
 
