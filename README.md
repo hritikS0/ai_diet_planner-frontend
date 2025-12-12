@@ -1,85 +1,73 @@
 # 🍽️ AI-Powered Diet Planner (MERN + Paxsenix AI)
 
-A smart MERN Stack application that generates personalized meal and nutrition plans using **Paxsenix AI**.  
-The system creates custom diet recommendations based on **6 key user metrics** including age, weight, gender, lifestyle, and fitness goals.
+A full-stack AI-driven diet planning system built using the **MERN stack**, powered by the **Paxsenix AI API**.  
+The application generates personalized nutrition plans based on **user’s age, weight, gender, activity level, and fitness goals**.
+
+---
+
+## 📁 Project Structure
+
+### 🔹 Frontend Repository  
+React + Tailwind CSS interface for entering details, viewing meal plans, handling authentication, and showing AI responses.
+
+**Repo:** [https://github.com/your-frontend-repo](https://github.com/hritikS0/ai_diet_planner-frontend)
+
+### 🔹 Backend Repository  
+Node + Express API with JWT authentication, MongoDB data handling, and Paxsenix AI request processing.
+
+**Repo:** [https://github.com/your-backend-repo](https://github.com/hritikS0/ai_diet_planner-backend)
 
 ---
 
 ## 🚀 Features
 
-### 🤖 AI-Generated Meal Plans
-- Uses **Paxsenix AI** to generate dynamic, personalized diet recommendations.
-- Processes structured JSON responses for clean nutrition output.
+### 🤖 AI Meal Planning
+- Uses **Paxsenix AI** to create customized diet plans.  
+- Handles structured AI responses with dynamic JSON parsing.
 
-### 🔐 Secure Authentication
-- Built with **Node.js + Express.js**
-- Implements **JWT-based authentication**
-- Proper request validation & protected routes
+### 🔐 Secure Backend
+- JWT-based authentication  
+- Protected routes  
+- Clean controller–service architecture  
+- Request validation & safe API handling
 
-### 🗂️ Clean API Layer
-- Efficient backend architecture using controllers, routes & middleware
-- Reliable Axios-based API communication
-
-### 🎨 Modern & Responsive UI
-- Frontend built with **React.js**
-- Styled using **Tailwind CSS**
-- Smooth UX with loading states & toast notifications (`react-hot-toast`)
+### 🎨 Modern UI
+- React.js for fast rendering  
+- Tailwind CSS for responsive design  
+- Smooth loader states & notifications using `react-hot-toast`
 
 ### ☁️ Deployment
-- End-to-end deployment on **Vercel**
-- Highly available & scalable cloud hosting
+- **Frontend:** Vercel  
+- **Backend:** (Render / Vercel / Railway — whichever you used)  
+- Environment variable support for secure API keys
 
 ---
 
 ## 🛠️ Tech Stack
 
 **Frontend:**  
-React.js, Tailwind CSS, Axios, react-hot-toast  
+- React.js  
+- Tailwind CSS  
+- Axios  
+- react-hot-toast  
 
 **Backend:**  
-Node.js, Express.js, JWT Authentication, Mongoose  
+- Node.js, Express.js  
+- JWT Authentication  
+- Mongoose  
+- Paxsenix AI API  
 
 **Database:**  
-MongoDB (Atlas)
-
-**AI Engine:**  
-Paxsenix AI API
-
-**Deployment:**  
-Vercel
+- MongoDB (Atlas)
 
 ---
 
-## 📦 How It Works (Flow)
+## 📦 Installation & Setup
 
-1. User creates an account → logs in  
-2. Provides details like age, weight, height, goal, etc.  
-3. Backend sends a structured request to Paxsenix AI  
-4. Receives AI-generated meal plan  
-5. Parsed and displayed in a clean UI  
-6. User can regenerate plans anytime
-
----
-
-## 📸 Screenshots
-(Add here when ready)
-
----
-
-## ▶️ Installation
+### 🔹 Backend Setup
 
 ```bash
-# Clone repo
-git clone https://github.com/hritikS0/ai-diet-planner.git
-cd ai-diet-planner
-
-# Install backend
-cd server
+git clone https://github.com/your-backend-repo.git
+cd backend
 npm install
-
-# Install frontend
-cd ../client
-npm install
-
-# Run
 npm run dev
